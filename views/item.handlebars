@@ -1,0 +1,13 @@
+  
+  <div id="Item">
+    
+      <h1> {{myItem.type}}
+      <ul>
+        {{#each myItem.products}}
+        <li>{{id}}</li>
+        <li>{{title}}</li>
+        <li><img src="{{image}}"></li>
+        
+        {{/each}}
+      </ul>
+    </div>

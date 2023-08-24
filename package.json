@@ -1,0 +1,26 @@
+{
+  "name": "myfood",
+  "version": "1.0.0",
+  "description": "Choose recipie on basis of Ingredients",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pannudeepak/CuisineComposer.git"
+  },
+  "author": "Pannudeepak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pannudeepak/CuisineComposer/issues"
+  },
+  "homepage": "https://github.com/Pannudeepak/CuisineComposer#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "node": "^20.5.1",
+    "node-fetch": "^3.3.2"
+  }
+}

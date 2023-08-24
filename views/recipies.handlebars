@@ -1,0 +1,90 @@
+  
+  <div id="item">
+    
+      
+        {{#each myItem.results}}
+        
+          <h1 id="recipieName">{{title}}</h1>
+          <div id="items">
+            <h4 class="itemHeads" ><img  id="recipePhoto" src="{{image}}"></h4>
+            <h4 class="itemHeads" >Preparation time:{{readyInMinutes}} minutes</h4>
+            <h4 class="itemHeads" >Preparation time:{{readyInMinutes}} minutes</h4>
+            <h4 class="itemHeads" >Preparation time:{{readyInMinutes}} minutes</h4>
+            <h4 class="itemHeads"><a href="#" onclick="openDialog('summary')">Summary</a> </h4>
+            <h4 class="itemHeads"><a href="#" onclick="openDialog('nutrients')">Nutrients</a>   </h4>
+            <h4 class="itemHeads" >Preparation time:{{readyInMinutes}} minutes</h4>
+            <h4 class="itemHeads" >Preparation time:{{readyInMinutes}} minutes</h4>
+             
+
+             {{#each analyzedInstructions}}
+            <h4 class="itemHeads">Steps</h4>
+            <ul>
+              {{#each steps}}
+              <li>{{step}}</li>
+            </ul>
+            {{/each}}
+            {{/each}}
+
+        </div>
+
+        
+
+        <div id="dialog" class="dialog">
+          <div class="dialog-content">
+            <span class="close" onclick="closeDialog('summary')">&times;</span>
+            <h2>Dialog Box</h2>
+            <div class="box"  id="summ">{{{summary}}}</div>
+          </div>
+        </div>
+
+        <div id="myDialog" class="dialog">
+          <div class="dialog-content">
+            <span class="close" onclick="closeDialog('nutrients')">&times;</span>
+            <h2>Dialog Box</h2>
+            <div class="box"  id="summ">
+               {{#each nutrition.nutrients}}
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th>{{name}}</th>
+                      <th>{{amount}}{{unit}}</th>
+                    </tr>
+                  </thead>
+                  
+                </table>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+
+
+        {{/each}}
+    
+
+    </div>
+
+   
+    
+
+
+
+
+
+    <script>
+            function openDialog(dil) {  
+              if(dil==='summary')
+        var dialog = document.getElementById("dialog");   
+          else{
+            var dialog = document.getElementById("myDialog"); 
+          }  
+        dialog.style.display = "block";
+      }
+      function closeDialog(dil) {
+         if(dil==='summary')
+        var dialog = document.getElementById("dialog") 
+        else
+         var dialog = document.getElementById("myDialog");
+        dialog.style.display = "none";
+      }
+
+    </script>
