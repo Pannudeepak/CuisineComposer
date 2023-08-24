@@ -9,7 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 dotenv.config({ path: "./config/.env" });
 const bodyParser = require("body-parser");
-
 app.get("/", (req, res) => {
   res.render("home");
 });
@@ -20,8 +19,6 @@ app.get("/searchProducts", (req, res) => {
 app.post("/searchProducts", (req, res) => {
   let search = req.body.productName;
   const url1 = `https://api.spoonacular.com/food/products/search?query=${search}&apiKey=${process.env.MYAPI}`;
-  console.log(search);
-  console.log(url1);
   fetch(url1)
     .then((response) => response.json())
     .then((data) => {
@@ -39,16 +36,16 @@ app.get("/searchRecipies", (req, res) => {
 });
 app.post("/searchRecipies", (req, res) => {
   let search = req.body.productName;
-  const myApi = "64473f0be5f940f480853e9d191c0b81";
-  const url1 = `https://api.spoonacular.com/recipes/complexSearch?query=${search}&apiKey=${myApi}`;
+  const url1 = `https://api.spoonacular.com/recipes/complexSearch?query=${search}&apiKey=${process.env.MYAPI}`;
   let page = 1;
-  console.log(url1);
+
   fetch(
-    `${url1}&offset=${page}&addRecipeInformation=true&number=1&addRecipeNutrition=true&instructionsRequired=true`
+    `${url1}&offset=${page}&addRecipeInformation=true&number=20&addRecipeNutrition=true&instructionsRequired=true`
   )
     .then((response) => response.json())
     .then((data) => {
       const myItem = data;
+      console.log(myItem);
 
       res.render("recipies", { myItem: myItem });
     })
