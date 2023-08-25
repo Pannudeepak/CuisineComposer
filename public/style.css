@@ -1,12 +1,9 @@
-
-  
-body{
-    background-color: rgb(17, 207, 14);
-    height: 100%;
-  }
+body {
+  background-color: rgb(216, 224, 216);
+  height: 100%;
+}
 header {
   background-color: rgb(228, 152, 12);
-  
 }
 
 nav ul {
@@ -30,84 +27,68 @@ nav a {
 nav a:hover {
   background-color: #555;
 }
-#main
-{
-    color: aliceblue;
-    background-color: rgb(228, 152, 12);
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#main {
+  color: aliceblue;
+  background-color: rgb(228, 152, 12);
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-#paraPhoto{
-    display: flex;
-    margin: 30px;
-    align-items: center;
+#paraPhoto {
+  display: flex;
+  margin: 30px;
+  align-items: center;
 }
-#myHeading
-{
-    font-size: xx-large;
-    color: #555;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+#myHeading {
+  font-size: xx-large;
+  color: #555;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-#myPara
-{
-    text-align: center;
-    font-size:x-large;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(87, 83, 99);
-    flex: 1;
-    max-width: 60%;
+#myPara {
+  text-align: center;
+  font-size: x-large;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(87, 83, 99);
+  flex: 1;
+  max-width: 60%;
 }
-#frontPhoto{
-    max-width: 100%;
-
+#frontPhoto {
+  max-width: 100%;
 }
-input, select, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
 }
 input[type="submit"]:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
-#end
-{
-    text-align: center;
-    font-size:x-large;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(87, 83, 99);
+#end {
+  text-align: center;
+  font-size: x-large;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(87, 83, 99);
 }
 
-
-
-
-
-
-
-
-#summ
-{
+#summ {
   background-color: aliceblue;
-  font-family: 'Times New Roman', Times, serif;
-  font-size:large;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
   color: #555;
 }
-
-
-
-
-
 
 .dialog {
   display: none; /* Hide the dialog box by default */
@@ -144,9 +125,6 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-
-
-
 /* table designing  */
 .styled-table {
   border-collapse: collapse;
@@ -159,13 +137,11 @@ input[type="submit"]:hover {
   padding: 8px;
   width: 50%;
   text-align: center;
-
 }
 
 .styled-table th {
   background-color: #f2f2f2;
   font-weight: bold;
- 
 }
 
 .styled-table tbody tr:nth-child(even) {
@@ -176,23 +152,15 @@ input[type="submit"]:hover {
   background-color: #ddd;
 }
 
-
-
-
-
-#items
-{
+#items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: rgb(139, 160, 153);
-  
 }
 
-
-.itemHeads
-{
+.itemHeads {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,7 +168,7 @@ input[type="submit"]:hover {
   margin: 2%;
 }
 
-#hea{
+#hea {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,14 +178,19 @@ input[type="submit"]:hover {
   animation: changeColor 5s infinite;
 }
 
-#here{
+#here {
   text-align: center;
   font-size: 500%;
 }
 
-
 @keyframes changeColor {
-  0% { background-color: #f0f0f0; }
-  50% { background-color: #74a5fa; }
-  100% { background-color: #f0f0f0; }
+  0% {
+    background-color: #f0f0f0;
+  }
+  50% {
+    background-color: #74a5fa;
+  }
+  100% {
+    background-color: #f0f0f0;
+  }
 }
